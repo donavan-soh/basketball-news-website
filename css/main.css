@@ -1,0 +1,451 @@
+/*
+Code references:
+
+[3] w3schools.com, 'CSS Tutorial', 1999-2021. [Source code]. https://www.w3schools.com/css/default.asp
+
+[4] w3schools.com, 'CSS Navigation Bar', 1999-2021. [Source code]. https://www.w3schools.com/css/css_navbar.asp
+
+The navigation bar code was adopted and edited, and looks different from the original navigation bar.
+
+[5] w3schools.com, 'CSS Forms', 1999-2021. [Source code]. https://www.w3schools.com/css/css_form.asp
+
+The submission form code was adopted and edited, and looks different from the original submission form
+
+[6] w3schools.com, 'Accordion', 1999-2021. [Source code]. https://www.w3schools.com/howto/howto_js_accordion.asp
+
+[7] w3schools.com, 'Collapsible', 1999-2021. [Source code]. https://www.w3schools.com/howto/howto_js_collapsible.asp
+
+The accordion and collapsible code were combined and editted to fit my site.
+
+Other than those mentioned above, all other codes are written by myself and referenced from w3schools.com.
+*/
+
+body {
+    background-color: white;
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/*BANNER*/
+.bannerimg {
+    width: 100%;
+    height: 100%;
+}
+/*END OF BANNER*/
+
+/*NAVIGATION BAR*/
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(32,32,32);
+}
+
+nav ul li {
+    float: left;
+    width: 20%;
+}
+
+nav ul li a {
+    display: block;
+    padding: 8px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav ul li a:hover:not(.activenav) {
+    background-color: rgb(189,189,188);
+    transition: 0.3s;
+}
+
+.activenav {
+    background-color: rgb(99,100,100);
+}
+
+@media screen and (max-width: 600px) {
+    nav ul li, nav ul li:last-child {
+        float: none;
+        border-right: none;
+        width: 100%
+    }
+}
+/*END OF NAVIGATION BAR*/
+
+/*CONTENTS*/
+/*CARD*/
+.card {
+    background-color: rgb(32,32,32);
+    padding: 10px;
+    margin-top: 2%;
+}
+/*END OF CARD*/
+
+/*MORE BUTTON*/
+.more {
+    width: 60%;
+    margin: auto;
+    padding: 0;
+    background-color: rgb(99,100,100);
+}
+
+.more a {
+    display: block;
+    padding: 1px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.more a:hover {
+    background-color: rgb(189,189,188);
+}
+/*END OF MORE BUTTON*/
+
+/*BACK BUTTON*/
+.back {
+    background-color: rgb(99,100,100);
+    margin: auto;
+    width: 24%;
+    margin-top: 20px;
+    padding: 0;
+}
+
+.back a {
+    display: block;
+    padding: 0;
+    margin: 0;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.back a:hover {
+    background-color: rgb(189,189,188);
+}
+
+@media screen and (max-width: 600px) {
+    .back {
+        width: 100%;
+    }
+}
+/*END OF BACK BUTTON*/
+
+/*EXPAND*/
+.expand {
+    background-color: rgb(32,32,32);
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    border: none;
+    outline: none;
+    transition: 0.3s;
+}
+
+.activeexpandpanel, .expand:hover {
+    background-color: rgb(99,100,100);
+}
+
+.expandpanel {
+    background-color: rgb(32,32,32);
+    padding: 0 20px;
+    margin: auto;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+@media screen and (max-width: 600px) {
+    .expand {
+        width: 114%;
+    }
+    
+    .expandpanel {
+        width: 114%;
+    }
+}
+/*END OF EXPAND*/
+
+/*INDEX*/
+.indexcontent {
+    float: left;
+    padding: 9px;
+    color: white;
+}
+
+.indexcontent h1{
+    color: rgb(42,42,42);
+}
+
+.indexmain {
+    width: 65%;
+    text-align: center;
+}
+
+.indexside {
+    width: 35%;
+    text-align: center;
+}
+
+.indexsection:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.indexmain img {
+    display: block;
+    margin: auto;
+}
+
+@media screen and (max-width: 600px) {
+    .indexmain, .indexside {
+        width: 100%;
+    }
+}
+/*END OF INDEX*/
+
+/*NEWS, DRILLS, TIPS*/
+.ndtsection {
+    color: white;
+    padding-right: 50px;
+    padding-left: 50px;
+    margin-top: 50px;
+}
+
+.ndtsection {
+    color: rgb(32,32,32);
+}
+
+.ndtcontent {
+    float: left;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    color: white;
+    width: 50%;
+}
+
+.ndtarticle {
+    color: white;
+}
+
+.ndtsection:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 992px) {
+    .ndtcontent {
+        width: 100%;
+    }
+}
+/*END OF NEWS, DRILLS, TIPS*/
+
+/*NEWS CONTENT*/
+.newscard {
+    background-color: rgb(32,32,32);
+    padding: 10px;
+    margin: 2% 10%;
+}
+
+.newsimgcaption {
+    font-size: 10px;
+}
+
+.newsheader {
+    color: white;
+    text-align: center;
+}
+
+.newssection img {
+    display: block;
+    margin: auto;
+}
+
+.newsheader {
+    padding-top: 3%;
+}
+
+.newsarticle {
+    color: white;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding-top: 3%;
+    padding-left: 25%;
+    padding-right: 25%;
+    border-top: 2px solid rgb(189,189,188);
+}
+
+.newsarticle img {
+    display: block;
+    margin: 0;
+}
+
+.newsarticle h6 {
+    color: rgb(189,189,188);
+}
+
+
+.newsarticle iframe {
+    border: none;
+}
+
+.newsarticle ul {
+    list-style-type: none;
+}
+
+.newsarticle a:link {
+  color: rgb(189,189,188);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.newsarticle a:visited {
+  color: rgb(189,189,188);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.newsarticle a:hover {
+  color: rgb(99,100,100);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.newsarticle a:active {
+  color: rgb(99,100,100);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+    .newscard {
+        margin: 2% 1%;
+    }
+    
+    .newsarticle{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
+    .newssection img {
+        width: 100%;
+    }
+    
+    .newsarticle img {
+        width: 100%;
+    }
+}
+/*END OF NEWS CONTENT*/
+
+/*SUBSCRIBE*/
+.subscribesection {
+    width: 50%;
+    margin: auto;
+    background-color: rgb(32,32,32);
+    color: white;
+    text-align: center;
+}
+
+.subscribesection h1 {
+    padding-top: 20px;
+}
+
+input[type=text], select {
+    width: 80%;
+    padding: 10px;
+    margin: 5px 0;
+    display: inline-block;
+    border: none;
+}
+
+input[type=submit] {
+    background-color: rgb(99,100,100);
+    color: white;
+    width: 80%;
+    padding: 15px 0;
+    margin: 20px 0;
+    border: none;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(189,189,188);
+}
+
+@media screen and (max-width: 600px) {
+    .subscribesection {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+/*END OF SUBSCRIBE*/
+
+/*SUBCRIPTION*/
+.subscriptionsection {
+    padding: 80px 0;
+    color: rgb(42,42,42);
+    text-align: center;
+}
+/*END OF SUBSCRIPTION*/
+/*END OF CONTENTS*/
+
+/*FOOTER*/
+footer {
+    background-color: rgb(32,32,32);
+    margin-top: 1%;
+}
+
+.info {
+    float: left;
+    padding: 10px;
+    color: white;
+}
+
+.key {
+    width: 30%;
+}
+
+.extra {
+    width: 40%;
+}
+
+footer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.subscribefooter {
+    font-size: 12px;
+    text-align: center;
+}
+
+.subscribefooter a {
+    color: white;
+}
+
+.copyright {
+    text-align: left;
+    font-size: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .key, .extra {
+        width: 100%;
+        text-align: center;
+    }
+    .info {
+        padding: 0;
+    }
+}
+/*END OF FOOTER*/
